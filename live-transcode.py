@@ -10,7 +10,7 @@ from flask import Flask, request
 from pymediainfo import MediaInfo
 app = Flask(__name__)
 
-DASHPATH = "/mnt/Data/Public/Videos/Other/Music Videos/dash-test"
+DASHPATH = "/mnt/Data/Temp"
 FFMPEG_PARAMS = "-copyts -avoid_negative_ts disabled -c:a aac -c:v libx264 -b:v 2000k -profile:v main -bf 1 -keyint_min 10 -g 10 -sc_threshold 0 -b_strategy 0 -min_seg_duration 10000000 -use_timeline 0 -f dash"
 
 # Start Timestamp, Duration, Input filename, output MPD location
